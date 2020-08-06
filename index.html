@@ -74,6 +74,11 @@
     			</div>
     			<div class="col-lg-10">
 	    			<form action="#" class="consult-form">
+					<form action="https://www.SnapHost.com/captcha/send.aspx" method="post" id="NewsletterSubscriptionForm" onsubmit="return ValidateForm(this);" target="_top">
+					<input id="skip_WhereToSend" name="skip_WhereToSend" type="hidden" value="imansarahaji@gmail.com" />
+					<input id="skip_SnapHostID" name="skip_SnapHostID" type="hidden" value="DPKXTBDYP72D" />
+					<input id="skip_WhereToReturn" name="skip_WhereToReturn" type="hidden" value="https://imansarahaji.com/" />
+					<input id="skip_Subject" name="skip_Subject" type="hidden" value="Message from Website" />
 	    				<div class="d-lg-flex align-items-md-end">
 		    				<div class="form-group mb-3 mb-lg-0 mr-4">
 		    					<label for="#">Name</label>
@@ -83,7 +88,11 @@
 		    					<label for="#">Email Address</label>
 		    					<input type="text" class="form-control" placeholder="Email Address">
 		    				</div>
-		    				<div class="form-group mb-3 mb-lg-0 mr-4">
+						<div class="form-group mb-3 mb-lg-0 mr-4">
+		    					<label for="#">Subject</label>
+		    					<input type="text" class="form-control" placeholder="Subject">
+		    				</div>
+		    				<!--<div class="form-group mb-3 mb-lg-0 mr-4">
 	      					<label for="#">Categories(optional)</label>
 	      					<div class="form-field">
 	        					<div class="select-wrap">
@@ -97,7 +106,7 @@
 	                    </select>
 	                  </div>
 		              </div>
-	              </div>
+	              </div>-->
 		    				<div class="form-group mb-3 mb-lg-0 mr-4">
 		    					<label for="#">Message</label>
 		              <textarea name="" id="" cols="30" rows="3" class="form-control d-flex align-items-center" placeholder="Message"></textarea>
