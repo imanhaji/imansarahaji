@@ -1,52 +1,59 @@
 <?php
-	$email_from = 'imansarahaji@gmail.com';
 
-	$email_subject = "New Form submission";
+$errors = ”;
 
-	$email_body = "You have received a new message from the user $name.\n".
-                            "Here is the message:\n $message".
-?>
+$myemail = ‘imansarahaji@gmail.com’;//<—–Put Your email address here. if(empty($_POST[‘name’]) ||
 
-<?php
+empty($_POST[’email’]) ||
 
-  $to = "yourname@yourwebsite.com";
+empty($_POST[‘message’]))
 
-  $headers = "From: $email_from \r\n";
-
-  $headers .= "Reply-To: $visitor_email \r\n";
-
-  mail($to,$email_subject,$email_body,$headers);
-
- ?>
- 
- <?php
-function IsInjected($str)
 {
-    $injections = array('(\n+)',
-           '(\r+)',
-           '(\t+)',
-           '(%0A+)',
-           '(%0D+)',
-           '(%08+)',
-           '(%09+)'
-           );
-               
-    $inject = join('|', $injections);
-    $inject = "/$inject/i";
-    
-    if(preg_match($inject,$str))
-    {
-      return true;
-    }
-    else
-    {
-      return false;
-    }
+
+$errors .= “\n Error: all fields are required”;
+
 }
 
-if(IsInjected($visitor_email))
+$name = $_POST[‘name’];
+
+$email_address = $_POST[’email’];
+
+$message = $_POST[‘message’];
+
+if (!preg_match(
+
+“/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i”, $email_address))
+
 {
-    echo "Bad email value!";
-    exit;
+
+$errors .= “\n Error: Invalid email address”;
+
 }
+
+if( empty($errors))
+
+{
+
+$to = $myemail;
+
+$email_subject = “Contact form submission: $name”;
+
+$email_body = “You have received a new message. “.
+
+” Here are the details:\n Name: $name \n “.
+
+“Email: $email_address\n Message \n $message”;
+
+$headers = “From: $myemail\n”;
+
+$headers .= “Reply-To: $email_address”;
+
+mail($to,$email_subject,$email_body,$headers);
+
+//redirect to the ‘thank you’ page
+
+header(‘Location: contact-form-thank-you.html’);
+
+}
+
 ?>
