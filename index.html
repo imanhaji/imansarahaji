@@ -277,8 +277,14 @@
               </figure>
               <div class="p-3">
                 <h3>Intern, City of Seattle</h3>
-                <p>August 2020–Present</p>
-		<p id="moreSDCI" onclick="ReadMoreSDCI()" class="btn smoothscroll btn-primary mr-2 mb-2">Read More</p>
+                <p>August 2020–Present
+		<span ID="moreSDCI"> <br>• Worked with the Seattle Department of Constructions and Inspections Drainage Team on data conversion for side sewer licensing and general contractor licensing in Acella
+								<br>• Worked with the Human Resources team to revise and update department material and data
+								<br>• Worked with the Human Resources team to manage job classifications, employment postings, employee data
+								<br>• Updated data regarding employee base within the departmental Human Resource Information System
+								<br>• Led implementation of SDCI Employee Service Awards to recognize milestones of over 75 employees in an annual ceremony
+								<br>The Seattle Department of Construction & Inspections issues land use, construction, and trade permits, conducts construction- and housing-related inspections, ensures compliance with our codes, and regulates rental rules.</span></p>
+		<p id="moreSDCI" onclick="readMoreSDCI()" class="btn smoothscroll btn-primary mr-2 mb-2">Read More</p>
               </div>
             </div>
           </div>
@@ -296,8 +302,12 @@
               </figure>
               <div class="p-3">
                 <h3>Research Assistant, Pacific Northwest Seismic Network</h3>
-                <p>February 2020–Present</p>
-		<p id="morePNSN" onclick="ReadMorePNSN()" class="btn smoothscroll btn-primary mr-2 mb-2">Read More</p>
+                <p>February 2020–Present
+		<span ID="morePNSN"> <br>• Tested and maintained field equipment for seismic station solar power systems and communications devices
+								<br>• Analyzing seismic data from field equipment and communicating with members in the field to monitor regional earthquakes
+								<br>• Designing assembly and construction drawings of various seismic equipment for contractors, including post and power configurations with excavation plan
+								<br>• Designing grounding drawings for electrical systems connecting solar, seismic equipment, and power panel enclosures for the various types of installations that are present at different seismic sites</span></p>
+		<p id="morePNSN" onclick="readMorePNSN()" class="btn smoothscroll btn-primary mr-2 mb-2">Read More</p>
               </div>
             </div>
           </div>
@@ -334,7 +344,7 @@
               <div class="p-3">
                 <h3>Teaching Assistant, University of Washington</h3>
                	<p>September 2019–December 2019</p>
-		<p id="moreTAUW" onclick="ReadMoreTAUW()" class="btn smoothscroll btn-primary mr-2 mb-2">Read More</p>
+		<p id="moreTAUW" onclick="readMoreTAUW()" class="btn smoothscroll btn-primary mr-2 mb-2">Read More</p>
               </div>
             </div>
           </div>
@@ -353,7 +363,7 @@
               <div class="p-3">
                 <h3>Intern, Sensol Systems</h3>
                 <p>June 2019–Present</p>
-		<p id="moreSensol" onclick="ReadMoreSensol()" class="btn smoothscroll btn-primary mr-2 mb-2">Read More</p>
+		<p id="moreSensol" onclick="readMoreSensol()" class="btn smoothscroll btn-primary mr-2 mb-2">Read More</p>
               </div>
             </div>
           </div>
@@ -372,7 +382,7 @@
               <div class="p-3">
                 <h3>Teaching Assistant, Robinson Center for Young Scholars</h3>
              	<p>June 2019–August 2019</p>
-		<p id="moreTARC" onclick="ReadMoreTARC()" class="btn smoothscroll btn-primary mr-2 mb-2">Read More</p>
+		<p id="moreTARC" onclick="readMoreTARC()" class="btn smoothscroll btn-primary mr-2 mb-2">Read More</p>
               </div>
             </div>
           </div>
@@ -1062,7 +1072,44 @@ e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
   <script src="js/jquery.sticky.js"></script>
   <script src="js/isotope.pkgd.min.js"></script>
 
-  
+  <script>
+	function readMorePureblue() {
+		var morePureblue = document.getElementByID("morePureblue");
+		var buttonPureblue = document.getElementByID("buttonPureblue");
+
+		if (document.getElementByID("buttonPureblue").innerHTML = ."Read More") {
+			document.getElementByID("buttonPureblue").innerHTML = ."Read Less"
+			morePureblue.style.display = "inline"
+			} else {
+			document.getElementByID("buttonPureblue").innerHTML = ."Read More";
+			morePureblue.style.display = "none";
+			}
+		}
+	  function readMoreSDCI() {
+		var moreSDCI = document.getElementByID("moreSDCI");
+		var buttonSDCI = document.getElementByID("buttonSDCI");
+
+		if (document.getElementByID("buttonSDCI").innerHTML = ."Read More") {
+			document.getElementByID("buttonSDCI").innerHTML = ."Read Less"
+			moreSDCI.style.display = "inline"
+			} else {
+			document.getElementByID("buttonSDCI").innerHTML = ."Read More";
+			moreSDCI.style.display = "none";
+			}
+		}
+	  function readMorePNSN() {
+		var morePNSN = document.getElementByID("morePNSN");
+		var buttonPNSN = document.getElementByID("buttonSDCI");
+
+		if (document.getElementByID("buttonPNSN").innerHTML = ."Read More") {
+			document.getElementByID("buttonPNSN").innerHTML = ."Read Less"
+			morePNSN.style.display = "inline"
+			} else {
+			document.getElementByID("buttonPNSN").innerHTML = ."Read More";
+			morePNSN.style.display = "none";
+			}
+		}
+  </script>
   <script src="js/main.js"></script>
     
   </body>
