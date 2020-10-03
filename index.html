@@ -1075,7 +1075,9 @@ e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
   <script src="js/isotope.pkgd.min.js"></script>
 
   <script>
-	function readMorePureblue() {
+	document.getElementById('buttonPureblue').addEventListener("click", readMorePureblue());
+	  
+	  function readMorePureblue() {
 		var morePureblue = document.getElementByID("morePureblue");
 		var buttonPureblue = document.getElementByID("buttonPureblue");
 
