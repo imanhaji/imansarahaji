@@ -414,9 +414,21 @@ section {
 
 .about .content ul li {
   margin-bottom: 20px;
-  display: flex;
-  align-items: center;
+  display: block;
+
 }
+/*
+.about #content-2 ul li {
+  margin-bottom: 20px;
+  display: block;
+}*/
+
+.about .content ul li {
+  margin-bottom: 20px;
+}
+
+
+
 
 .about .content ul strong {
   margin-right: 10px;
