@@ -81,6 +81,26 @@
     onscroll(document, toggleBacktotop)
   }
 
+  const resume = document.querySelector("#resume");
+  const resumemore = document.querySelector("#resume-more");
+  const showmore = document.querySelector("#show-more");
+  const showless = document.querySelector("#show-less");
+  function toggleShowMore() {
+      if (resumemore.style.display === "none" || resumemore.style.display === "") {
+        resumemore.style.display = "block";
+        resume.style.display = "none";
+
+    }
+  }
+  showmore.addEventListener('click', toggleShowMore)
+  function toggleShowLess() {
+    if (resume.style.display === "none" || resume.style.display === "") {
+      resume.style.display = "block";
+      resumemore.style.display = "none";
+    }
+  }
+  showless.addEventListener('click', toggleShowLess)
+
   /**
    * Mobile nav toggle
    */
